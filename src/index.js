@@ -6,10 +6,10 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#007bff", // Replace with your primary color
+      main: "#007bff",
     },
     secondary: {
-      main: "#3b3b3b", // Replace with your secondary color
+      main: "#3b3b3b",
     },
   },
 });
@@ -21,7 +21,3 @@ root.render(
     </ThemeProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
