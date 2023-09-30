@@ -5,7 +5,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const projectRouter = require("./routes/projectList");
 const projectDetailRouter = require("./routes/projectDetail");
-
+const searchRouter = require("./routes/search");
+//connecting to mongoDb
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -22,11 +23,12 @@ db.once("open", () => {
 });
 const app = express();
 
-const port = 8000;
+const port = process.env.SERVER_PORT;
 app.use(cors());
-
+//implementing all routes
 app.use(projectRouter);
 app.use(projectDetailRouter);
+app.use(searchRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

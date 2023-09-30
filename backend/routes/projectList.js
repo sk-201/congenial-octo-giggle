@@ -2,7 +2,7 @@ const express = require("express");
 const DataModel = require("../models/DataModel");
 
 const router = express.Router();
-
+//route for fetching all projects
 router.get("/projects", async (req, res) => {
   try {
     const projects = await DataModel.find({});

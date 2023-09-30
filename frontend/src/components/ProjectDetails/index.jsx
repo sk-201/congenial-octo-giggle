@@ -6,6 +6,7 @@ import axios from "axios";
 export const ProjectDetails = ({ toggleDrawer, state, projectId }) => {
   const [project, setProject] = useState(null);
 
+  //fetching single project details by projectId
   useEffect(() => {
     if (projectId) {
       axios

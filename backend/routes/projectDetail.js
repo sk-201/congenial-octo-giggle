@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const DataModel = require("../models/DataModel");
-
+//route for fetching single Project Detail
 router.get("/project/:id", async (req, res) => {
   try {
     const projectId = req.params.id;
